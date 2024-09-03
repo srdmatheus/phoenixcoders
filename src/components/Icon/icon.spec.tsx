@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { IconType } from "react-icons";
 
-import { Icon } from "./icon";
+import { Icon } from ".";
 
 describe("<Icon />", () => {
   it("should correctly map all icons to valid SVG components", () => {
