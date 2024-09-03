@@ -1,27 +1,29 @@
 {
+  "endOfLine": "auto",
   "tabWidth": 2,
   "semi": true,
   "singleQuote": false,
   "trailingComma": "none",
   "importOrder": [
-     "^(react/(.*)$)|^(react$)",
-     "^(next/(.*)$)|^(next$)",
-     "",
-     "<THIRD_PARTY_MODULES>",
-     "",
-     "^types$",
-     "^@/env(.*)$",
-     "^@/types/(.*)$",
-     "^@/config/(.*)$",
-     "^@/lib/(.*)$",
-     "^@/hooks/(.*)$",
-     "^@/components/ui/(.*)$",
-     "^@/components/app/(.*)$",
-     "^@/components/(.*)$",
-     "^@/styles/(.*)$",
-     "^@/app/(.*)$",
-     "",
-     "^[./]"
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+
+    "^types$",
+    "^@/env(.*)$",
+    "^@/types/(.*)$",
+    "^@/config/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/components/ui/(.*)$",
+    "^@/components/app/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/app/(.*)$",
+    "",
+    "^[./]"
   ],
   "importOrderSeparation": false,
   "importOrderSortSpecifiers": true,
@@ -30,7 +32,7 @@
   "importOrderMergeDuplicateImports": true,
   "importOrderCombineTypeAndValueImports": true,
   "plugins": [
-     "@ianvs/prettier-plugin-sort-imports",
-     "prettier-plugin-tailwindcss"
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
   ]
 }

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 
 import "@/styles/globals.css";
 
 import { Providers } from "@/providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto_Flex({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +20,7 @@ type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
