@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -24,9 +25,15 @@ const config: Config = {
           } // 40px, 60px, 2px
         ],
         H2: ["2.5rem", { lineHeight: "3.125rem", fontWeight: "500" }], // 40px, 50px
-        H3: ["2rem", { lineHeight: "2.5rem", fontWeight: "500" }] // 32px, 40px
+        H3: [
+          "2rem",
+          { lineHeight: "2.5rem", letterSpacing: "-0.025em", fontWeight: "500" }
+        ] // 32px, 40px
       },
       colors: {
+        foreground: {
+          DEFAULT: "#08121B"
+        },
         blue: {
           1: "#28EEED",
           2: "#394C67",
@@ -45,11 +52,19 @@ const config: Config = {
         semanticColor: {
           1: "#0BB07B",
           2: "#F03D3D"
+        },
+        gray: {
+          1: "#A1B2C3",
+          2: "#7188AA"
         }
       },
       boxShadow: {
         cardDev: "0px 8px 48px 0px rgba(40, 238, 237, 0.25)",
         cardExp: "0px 4px 10px 0px rgba(40, 238, 237, 0.4)"
+      },
+      fontFamily: {
+        roboto: ["var(--font-roboto)", ...fontFamily.sans],
+        zen_dots: ["var(--font-zen_dots)", ...fontFamily.sans]
       }
     }
   },
