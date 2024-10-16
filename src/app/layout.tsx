@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
 
 import "@/styles/globals.css";
 
 import { Providers } from "@/providers";
 
-const roboto = Roboto_Flex({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"]
-});
+import { fonts } from "../../public/fonts";
+
+const fontVariables = fonts.map((font) => font.variable).join(" ");
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +18,7 @@ type RootLayoutProps = Readonly<{ children: React.ReactNode }>;
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-BR">
-      <body className={roboto.className}>
+      <body className={`${fontVariables} font-roboto antialiased`}>
         <Providers>{children}</Providers>
       </body>
     </html>
